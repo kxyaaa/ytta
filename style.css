@@ -1,0 +1,141 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #4b3a34;
+    color: #4b3a34;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    height: 100vh;
+    margin: 0;
+    padding-top: 30px;
+    text-align: center;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+/* ==============================================
+   TAMPILAN DEFAULT (MOBILE / HP)
+============================================== */
+.slide {
+    display: none;
+    /* Sembunyikan semua slide secara default */
+    background: #fffdf9;
+    padding: 40px;
+    border-radius: 24px;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.18);
+    width: 90%;
+    max-width: 400px; /* Ukuran pas untuk HP */
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+.slide.active {
+    display: block;
+    /* Hanya tampilkan slide yang aktif */
+}
+
+input[type="text"] {
+    width: 80%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #d6c8bf;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+button,
+.gift-btn {
+    background-color: #8b6a60;
+    /* Warna tombol pink */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
+    transition: background 0.3s;
+}
+
+button:hover,
+.gift-btn:hover {
+    background-color: #70534b;;
+}
+
+/* Container khusus untuk mini game */
+.game-container {
+    position: relative;
+    height: 200px;
+    margin-top: 20px;
+    width: 100%;
+}
+
+#catch-btn {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    transition: all 0.2s ease;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ==============================================
+   TAMPILAN DESKTOP / LAPTOP (RESPONSIVE)
+============================================== */
+@media screen and (min-width: 768px) {
+    .slide {
+        max-width: 700px; /* Melebar saat dibuka di laptop */
+        padding: 50px 60px;
+    }
+
+    /* Memperbesar area lari-larian tombol kado */
+    .game-container {
+        height: 300px; 
+    }
+
+    /* Menyesuaikan ukuran teks ucapan agar lebih elegan di layar besar */
+    #slide-3 p {
+        font-size: 1.1rem;
+        line-height: 1.6;
+        padding: 0 20px;
+    }
+
+    /* Membatasi lebar Spotify agar tidak terlalu memanjang */
+    iframe {
+        max-width: 500px;
+        margin: 0 auto;
+        display: block;
+    }
+}
+
+#slide-1.active{
+    margin-top: 18vh;
+}
+
+@media screen and (max-width: 767px) {
+    body {
+        align-items: center;
+        padding-top: 0;
+    }
+
+    .slide {
+        width: 80%;
+        max-width: 320px;
+        padding: 45px 30px;
+    }
+
+    #slide-1.active {
+        margin-top: 0;
+    }
+}

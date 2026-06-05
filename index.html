@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>APAA YAAA</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <audio id="bg-music" loop>
+        <source src="sound.mp3" type="audio/mpeg">
+    </audio>
+
+    <div id="slide-1" class="slide active">
+        <h2>Masukkan Sandi Rahasia 🔐</h2>
+        <p>Clue: tahun pertama kita kenal.</p>
+        <input type="text" id="password-input" placeholder="Ketik jawabanmu di sini...">
+        <button onclick="checkPassword()">Buka Kunci</button>
+        <p id="error-msg" style="color: red; display: none;">Salah wleee! Coba lagi ya.</p>
+    </div>
+
+    <div id="slide-2" class="slide">
+        <h2>Eits, Tangkap Dulu!</h2>
+        <p>Coba klik tombol di bawah ini kalau bisa.</p>
+        <div class="game-container">
+            <button id="catch-btn">
+                Tangkap Aku!
+            </button>
+        </div>
+    </div>
+
+    <div id="slide-3" class="slide">
+        <h1>Happy Birthday! 🎉</h1>
+        <p>
+            Untuk seseorang yang hari ini bertambah satu angka usianya 🎂<br><br>
+
+            Katanya waktu berjalan cepat, dan tanpa terasa hari ini datang lagi membawa satu angka baru dalam
+            hidupmu.<br><br>
+            Semoga di umur yang baru ini kamu selalu diberi kesehatan, kebahagiaan, dan kekuatan untuk menjalani
+            hal-hal yang sedang diusahakan.<br><br>
+            Semoga semua yang sedang kamu perjuangkan perlahan menemukan jalannya, dan semoga hal-hal baik datang
+            lebih sering daripada yang kamu kira.<br><br>
+            Terima kasih karena sudah menjadi seseorang yang menyenangkan untuk dikenal.<br><br>
+            Selamat merayakan hari ini, dan semoga tahun ini menjadi tahun yang baik untukmu. <br><br>
+            Sekali lagi HAPPY BIRTHDAY SIDQYY, panjang umur sehat selaluu. ✨
+        </p>
+
+        <br><br>
+        <a href="birthday-cake.html" class="gift-btn">Open Gift 🎁</a>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
