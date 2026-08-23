@@ -1,5 +1,5 @@
 // Atur kata sandi yang benar di sini (gunakan huruf kecil semua biar mudah)
-const sandiBenar = "2024";
+const sandiBenar = "2025";
 
 function checkPassword() {
     // Ambil input dan ubah jadi huruf kecil semua untuk mencegah error besar/kecil huruf
